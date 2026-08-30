@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* Claro por defecto */
+:root {
+  --tinta: #16150f;
+  --papel: #faf9f5;
+  --suave: #6b6960;
+  --linea: #dedbd0;
+  --panel: #f2f0ea;
+  color-scheme: light;
+}
+
+/* El tema es siempre explicito: la clase la pone React al arrancar. */
+:root.oscuro {
+  color-scheme: dark;
+  --tinta: #eceae2;
+  --papel: #121210;
+  --suave: #8a877c;
+  --linea: #2c2b26;
+  --panel: #1b1a17;
+}
+
+html, body, #root { height: 100%; margin: 0; }
+body {
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  transition: background 0.15s, color 0.15s;
+}
+input, textarea, select { user-select: text; }
+
+@layer components {
+  .btn-primario {
+    background: var(--tinta);
+    color: var(--papel);
+    padding: 0.75rem 2.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primario:hover { opacity: 0.85; }
+  .btn-secundario {
+    border: 1px solid var(--linea);
+    color: var(--tinta);
+    background: transparent;
+    padding: 0.75rem 1.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .btn-secundario:hover { border-color: var(--tinta); }
+  .btn-nav {
+    color: var(--suave);
+    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  .btn-nav:hover { color: var(--tinta); background: var(--panel); }
+  .btn-texto {
+    color: var(--suave);
+    font-size: 0.9rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  .btn-texto:hover { color: var(--tinta); }
+  .input {
+    border: 1px solid var(--linea);
+    background: transparent;
+    color: var(--tinta);
+    padding: 0.6rem 0.85rem;
+    font-size: 1rem;
+    outline: none;
+  }
+  .input:focus { border-color: var(--tinta); }
+  .input::placeholder { color: var(--suave); opacity: 0.7; }
+  select.input option {
+    background: var(--papel);
+    color: var(--tinta);
+  }
+}
