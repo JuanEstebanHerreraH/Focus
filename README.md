@@ -1,12 +1,27 @@
-# Foco
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="docs/logo-light.png">
+    <img src="docs/logo-light.png" alt="Foco" width="110">
+  </picture>
+</p>
 
-Aplicación de escritorio para Windows que responde una sola pregunta: **¿qué hago ahora?**
+<h1 align="center">Foco</h1>
 
-No es un gestor de tareas. Es lo contrario. Un gestor de tareas te muestra una lista y te deja la decisión; Foco toma la decisión por vos y te muestra una cosa sola.
+<p align="center">
+  Aplicación de escritorio para Windows que responde una sola pregunta:<br>
+  <strong>¿qué hago ahora?</strong>
+</p>
 
-![Estado](https://img.shields.io/badge/estado-v1-black) ![Plataforma](https://img.shields.io/badge/plataforma-Windows%2010%2F11-black) ![Licencia](https://img.shields.io/badge/licencia-MIT-black)
+<p align="center">
+  <img src="https://img.shields.io/badge/estado-v1-black" alt="Estado">
+  <img src="https://img.shields.io/badge/plataforma-Windows%2010%2F11-black" alt="Plataforma">
+  <img src="https://img.shields.io/badge/licencia-MIT-black" alt="Licencia">
+</p>
 
 ---
+
+No es un gestor de tareas. Es lo contrario. Un gestor de tareas te muestra una lista y te deja la decisión; Foco toma la decisión por vos y te muestra una cosa sola.
 
 ## El problema
 
@@ -100,6 +115,9 @@ cd src-tauri && cargo test
 ## Estructura
 
 ```
+docs/
+  logo-light.png     Logo para fondo claro
+  logo-dark.png      Logo para fondo oscuro
 src/
   engine.ts          Motor de decisión: puntuación, archivado, métrica
   types.ts           Modelo de datos y migraciones
